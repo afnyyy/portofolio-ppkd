@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <FORM> -->
+  <table border="1" align="center" width="70%">
+    <tr>
+      <td width="100%" colspan="2">
+        <H2 ALIGN="center">Perhitungan Bunga--Afny</H2>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="50%">
+        <pre>Data Input Saldo :<input type="number" size="11" id="ijumlah"></pre>
+        <pre>Bunga            :<input type="number" size="11" id="obunga"> %</pre>
+        <pre>Waktu            :<input type="text" size="11" id="owaktu"> Bulan</pre>
+        <p id="hasil"></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="100%" colspan="2">
+
+        <center>
+          <button TYPE="button" onclick="hitungtotal()"> Submit </button>
+          <button TYPE="reset">Reset</button>
+        </center>
+      </td>
+
+    </tr>
+  </table>
+  <!-- </FORM> -->
+
+
+  <script>
+    function hitungtotal() {
+      var saldo = parseFloat(document.getElementById("ijumlah").value);
+      var bunga = parseFloat(document.getElementById("obunga").value) / 100;
+      var waktu = parseInt(document.getElementById("owaktu").value);
+      //menunjukkan hasil
+      var hasil = " ";
+
+      // console.log(saldo);
+      for (let i = 1; i <= waktu; i++)
+      {
+        saldo = saldo + (saldo * bunga);
+        hasil += "saldo ke-" + i + "Rp. " + saldo + "<br>";
+      }
+      //menampilkan hasil
+      document.getElementById("hasil").innerHTML = hasil;
+    }
+
+  </script>
+</body>
+
+</html>

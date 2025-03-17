@@ -1,0 +1,255 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  justify-content: center;
+  background-color: black;
+  height: 30pxx;
+}
+
+.navbar img {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+
+#hero {
+  height: 100vh;
+  padding-top: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+#hero .btn-warning {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+#aboutus {
+  height: 100vh;
+  padding-top: 200px;
+}
+
+#aboutus .about {
+  font-weight: bold;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+  margin-top: 70px;
+}
+
+#aboutus .image-container {
+  margin-top: 100px;
+}
+#aboutus .mySlides {
+  display: none;
+}
+#aboutus .w3-badge {
+  cursor: pointer;
+  margin-top: 10px;
+  height: 15px;
+  width: 12px;
+}
+
+#philosopi {
+  height: 100vh;
+  margin-top: 70px;
+  padding-top: 60px;
+}
+
+#philosopi .pilosopi {
+  font-weight: bold;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 3rem;
+}
+
+#philosopi .mySlides1 {
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+#case-study {
+  height: 100vh;
+  padding-top: 60px;
+}
+
+#case-study h1 {
+  font-size: 5rem;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+}
+
+#case-study .btn-warning {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+#case-study .case1 img {
+  clip-path: circle(50% at right);
+  object-position: -75%;
+  object-fit: cover;
+  transform: translateX(-75px);
+  display: flex;
+}
+#case-study .case2 img {
+  object-fit: cover;
+  object-position: center;
+  clip-path: circle(65% at center);
+  transform: translateY(-55px);
+  margin-left: -181px;
+}
+
+#case-study .vertical-line {
+  width: 2px; /* Ketebalan garis */
+  height: 400px; /* Sesuaikan tinggi garis */
+  background-color: white; /* Warna garis */
+  transform: translateY(-60px);
+  display: flex;
+}
+#case-study .vertical-line2 {
+  width: 2px; /* Ketebalan garis */
+  height: 400px; /* Sesuaikan tinggi garis */
+  background-color: white; /* Warna garis */
+  transform: translateY(-60px);
+  position: absolute;
+  right: 520px; /* Sesuaikan posisi */
+  display: flex;
+}
+#case-study .case3 img {
+  object-position: 50%;
+  object-fit: cover;
+  clip-path: circle(50% at left);
+  transform: translateX(-260px);
+  padding-inline-start: 60%;
+  margin-inline-start: -48%;
+  display: flex;
+}
+#allproduk {
+  height: 100vh;
+  padding-top: 70px;
+}
+
+#allproduk .btn-warning {
+  background-color: orange;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+#produk1 {
+  height: 100vh;
+  padding-top: 200px;
+}
+
+#produk1 img {
+  justify-content: center;
+  border-bottom: 10px;
+  margin-left: 0;
+  border-top-right-radius: 20px; /* Ujung kanan atas */
+  border-bottom-left-radius: 20px; /* Ujung kiri bawah */
+  box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.2); /* Bayangan */
+}
+
+#foto .profile {
+  font-weight: bold;
+}
+
+#foto .profile-card {
+  background: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+#foto .profile-card:hover {
+  transform: translateY(-5px);
+}
+#foto .profile-card img {
+  width: 220px;
+  height: 180px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#foto .profile-card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+#foto .profile-card p {
+  font-size: 14px;
+  color: gray;
+}
+
+#maps {
+  height: 120vh;
+  padding-top: 100px;
+}
+
+#maps .card-floating {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Mengurangi jarak berlebihan pada address dan contact */
+#maps .container.mt-5 {
+  margin-top: 20px !important;
+}
+
+#maps .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#maps .col-md-6 {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Perbaikan footer agar tidak mengganggu layout */
+footer {
+  position: relative;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+}

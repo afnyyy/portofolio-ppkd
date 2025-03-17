@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perulangan</title>
+</head>
+
+<body>
+  <script>
+    //for
+    for (let index = 0; index < 6; index++)
+    {
+      console.log(index);
+    }
+
+    let array = ["apel", "jeruk", "mangga"];
+    for (let i = 0; i < array.length; i++)
+    {
+      console.log("Buah ke- " + i + ":" + array[i]);
+    }
+
+    //while
+    let input;
+    while (input !== "exit")
+    {
+      input = prompt("Masukkan sesuatu (ketik exit)");
+      console.log("Anda Mengetikan :" + input);
+    }
+
+
+
+    //faktorial 
+    let n = parseInt(5);
+    let faktorial = 1;
+    let jml = 0;
+
+    for (let ind = 1; ind <= n; ind++)
+    {
+      faktorial = faktorial * ind;
+      jml = jml + ind;
+
+    }
+    //document.log(faktorial);
+    document.write(faktorial + "<br>");
+    document.write(jml);
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

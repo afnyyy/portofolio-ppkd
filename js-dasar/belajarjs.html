@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
+  <title>Memasukan Bilangan</title>
+</head>
+
+<body>
+  <h1>Memasukan Angka</h1>
+  <form onsubmit="return false" action="">
+    <label for=""> Bilangan 1 </label>
+    <input type="text" id="bilangan1" /> <br> <br>
+    <label for=""> Bilangan 2</label>
+    <input type="text" id="bilangan2" /> <br> <br>
+
+    <button type="submit" onclick="jml()">Jumlah</button>
+    <button type="submit" onclick="krg()">Kurang</button>
+    <button type="submit" onclick="kli()">Kali</button>
+    <button type="submit" onclick="bgi()">Bagi</button> <br> <br>
+    <button type="reset">Reset</button>
+  </form>
+  <h1 id="hasil">Hasil: -</h1>
+  <script>
+    function jml() {
+      bill1 = parseFloat(document.getElementById("bilangan1").value);
+      bill2 = parseFloat(document.getElementById("bilangan2").value);
+
+      if (isNaN(bill1)) bill1 = 0;
+      if (isNaN(bill2)) bill2 = 0;
+      var hasil = bill1 + bill2;
+      document.getElementById("hasil").innerText = "Hasil : " + hasil;
+    }
+
+    function krg() {
+      bill1 = parseFloat(document.getElementById("bilangan1").value);
+      bill2 = parseFloat(document.getElementById("bilangan2").value);
+
+      if (isNaN(bill1)) bill1 = 0;
+      if (isNaN(bill2)) bill2 = 0;
+      var hasil = bill1 - bill2;
+      document.getElementById("hasil").innerText = "Hasil : " + hasil;
+    }
+
+    function kli() {
+      bill1 = parseFloat(document.getElementById("bilangan1").value);
+      bill2 = parseFloat(document.getElementById("bilangan2").value);
+
+      if (isNaN(bill1)) bill1 = 0;
+      if (isNaN(bill2)) bill2 = 0;
+      var hasil = bill1 * bill2;
+      document.getElementById("hasil").innerText = "Hasil : " + hasil;
+    }
+
+    function bgi() {
+      bill1 = parseFloat(document.getElementById("bilangan1").value);
+      bill2 = parseFloat(document.getElementById("bilangan2").value);
+
+      if (isNaN(bill1)) bill1 = 0;
+      if (isNaN(bill2)) bill2 = 0;
+      var hasil = bill1 / bill2;
+      document.getElementById("hasil").innerText = "Hasil : " + hasil;
+    }
+
+
+  </script>
+</body>
+
+</html>

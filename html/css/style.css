@@ -1,0 +1,28 @@
+.display-inti .card .card-header p,
+.display-inti .card .card-body p,
+.display-inti .card .card-footer p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.display-inti .card .card-body p {
+  font-size: 5vw;
+}
+
+.display-inti .card .card-body {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.display-antrian .card .card-body p {
+  font-size: 3vw;
+}
+
+.jadwal-solat .box-jadwal-solat {
+  background: linear-gradient(164deg, rgb(247, 152, 44), rgb(250, 238, 215));
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 5px;
+}

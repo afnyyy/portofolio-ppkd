@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        No 1.
+         var input = prompt("Apakah sudah membayar?(ya/tidak)");
+        if (input == "ya") {
+            console.log("Kamu boleh ikut ujian");
+        } else {
+            console.log("Kamu belum boleh ikut ujian");
+        }
+
+        No 2.
+         var inputSuhu = prompt("Berapa suhu hari ini?");
+        if (parseInt(inputSuhu) <= 20) {
+            console.log("Udara dingnin");
+        } else {
+            console.log("Tidak ada keterangan");
+        }
+
+        No 3.
+         var inputNilai = parseInt(prompt("Masukan Nilai"));
+
+        if (inputNilai >= 85) {
+            console.log("A");
+        } else if (inputNilai >= 70 && inputNilai <= 84) {
+            console.log("B");
+        } else if (inputNilai >= 50 && inputNilai <= 69) {
+            console.log("C");
+        } else {
+            console.log("D");
+        }
+
+        No 3. versi switch
+         switch (true) {
+            case inputNilai >= 85:
+                console.log("A");
+                break;
+            case inputNilai >= 70:
+                console.log("B");
+                break;
+            case inputNilai >= 50:
+                console.log("C");
+                break;
+            default:
+                console.log("D");
+                break;
+        }
+
+        4.
+        var usia = parseInt(prompt("Usianya"));
+        var tiket = 100000;
+
+        if (usia < 10) {
+            tiket = tiket - (tiket * 50 / 100);
+            console.log(tiket);
+        } else if (usia >= 10 && usia <= 17) {
+            tiket = tiket - (tiket * 25 / 100)
+            console.log(tiket);
+        } else {
+            console.log(tiket);
+        }
+
+        5.
+        var roda = parseInt(prompt("rODANYA "));
+
+        switch (roda) {
+            case 2:
+                console.log("MOTORRR");
+                break;
+            case 4:
+                console.log("MOBILL");
+                break;
+            case 6:
+                console.log("TREGGGG");
+                break;
+            default:
+                console.log("mobil mobilan")
+                break;
+        }
+
+        6.
+        for (let index = 1; index <= 10; index++) {
+            console.log(`${index}  X 5 = ${index * 5}`);
+        }
+    </script>
+</body>
+
+</html>

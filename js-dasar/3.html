@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="umur"></div>
+  <script>
+    let nama = "Afny";
+    let age = 4;
+    // jika afny umurnya
+    if (age == 5)
+    {
+      document.querySelector("#umur").innerHTML = "balita";
+    }
+    else
+    {
+      document.querySelector("#umur").innerHTML = "kanak-kanak";
+    }
+
+
+
+    if (nama)
+    {
+      //document.writer ('iyaa benar')
+      console.log("iyaa adaa");
+      document.querySelector("#app").innerHTML = "iya ada nilainya";
+    } else
+    {
+      console.log("tidak ada nilai");
+      document.querySelector("#app").innerHTML = "Tidak ada nilainya";
+    }
+
+  </script>
+</body>
+
+</html>

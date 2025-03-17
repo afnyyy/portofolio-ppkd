@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Memasukan Bilangan</title>
+  </head>
+
+  <style>
+    body {
+      background-color: rgb(88, 200, 228);
+    }
+
+    h1,
+    h2,
+    hr {
+      text-align: center;
+    }
+
+    .btn {
+      text-align: center;
+    }
+
+    button {
+      background: rgb(86, 241, 86);
+      border-radius: 5px;
+      padding: 7px;
+      border: 10px;
+    }
+
+    button:hover {
+      background: white;
+      cursor: pointer;
+    }
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 80px;
+    }
+
+    footer {
+      text-align: center;
+      background: fixed;
+      background-color: rgb(2, 0, 117);
+      color: aliceblue;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <body>
+    <img src="../img/logounj.png" alt="UNJ Logo" />
+    <h1>Data Mahasiswa</h1>
+    <h2>Universitas Negeri Jakarta</h2>
+    <hr />
+    <h2>Input Data</h2>
+    <form onsubmit="return false">
+      <pre> <label for=""> NIM            :  </label> <input type="number" id="nim" required/> </pre>
+      <pre> <label for=""> Nama Mahasiswa :  </label> <input type="text" id="nama" /> </pre>
+      <pre> <label for=""> Jenis Kelamin  :  </label> <select name="jk"> <option value="Pria">Laki - laki </option> <option value="Wanita">Perempuan </option> </select> </pre>
+      <pre> <label for=""> Agama          :  </label> <select name="agama"> <option value="agama"> Islam </option> <option value="agama">Kristen </option> <option value="agama"> Katolik </option> <option value="agama"> Hindu </option> <option value="agama"> Budha </option></select> </pre>
+      <pre> <label for=""> Status         :  </label> <input type="radio" value="lajang" name="status"> Lajang <input type="radio" value="menikah" name="status"> Menikah </pre>
+      <pre> <label for=""> Jurusan        :  </label> <select name="jurusan"> <option value="jurusan"> Teknik Informatika </option> <option value="jurusan"> Teknik Sipil </option> <option value="Jurusan"> Teknik Mesin </option> <option value="jurusan"> Teknik Elektro </option> <option value="jurusan"> Teknik Elektronika </option></select> </pre>
+      <pre> <label for=""> Komentar       :  </label> <textarea name="komentar" rows="3" cols="40" id="komentar"></textarea> </pre>
+
+      <div class="btn">
+        <button type="submit" onclick="kirim()">Kirim</button>
+        <button type="reset">Ulang</button>
+        <hr />
+      </div>
+    </form>
+    <h2>Hasil Data</h2>
+    <pre> <label for=""> NIM             :  </label> <input type="text" id="r_nim" name="r_nim" required/> </pre>
+    <pre> <label for=""> Nama Mahasiswa  :  </label> <input type="text" id="r_nama" name="r_nama" required/> </pre>
+    <pre> <label for=""> Jenis Kelamin   :  </label> <input type="text" id="r_jk" name="r_jk" required/> </pre>
+    <pre> <label for=""> Agama           :  </label> <input type="text" id="r_agama" name="r_agama" required/> </pre>
+    <pre> <label for=""> Status          :  </label> <input type="text" id="r_status" name="r_status" required/> </pre>
+    <pre> <label for=""> Jurusan         :  </label> <input type="text" id="r_jurusan" name="r_jurusan" required/> </pre>
+    <pre> <label for=""> Komentar        :  </label> <input type="text" id="r_komentar" name="r_komentar" required/> </pre>
+
+    <script>
+      function kirim() {
+        // input____________________________
+        var nim = document.getElementById("nim").value;
+        var nama = document.getElementById("nama").value;
+
+        var agama = document.querySelector("select[name='agama']");
+        var resultAgama = agama ? agama.value : "";
+
+        var jk = document.querySelector("select[name='jk']");
+        var resultJk = jk ? jk.value : "";
+
+        var status = document.querySelector("input[name='status']:checked");
+        var resultStatus = status ? status.value : "";
+
+        var jurusan = document.querySelector("select[name='jurusan']");
+        var resultJurusan = jurusan ? jurusan.value : "";
+
+        var komentar = document.getElementById("komentar").value;
+
+        // output____________________________
+        document.getElementById("r_nim").value = nim;
+        document.getElementById("r_nama").value = nama;
+        document.getElementById("r_jk").value = resultJk;
+        document.getElementById("r_agama").value = resultAgama;
+        document.getElementById("r_jurusan").value = resultJurusan;
+
+        if (resultStatus === "lajang") {
+          document.getElementById("r_status").value = "Lajang";
+        } else if (resultStatus === "menikah") {
+          document.getElementById("r_status").value = "Menikah";
+        }
+        // document.getElementById("r_agama").value = agama;
+        // document.getElementById("r_status").value = status;
+        // document.getElementById("r_jurusan").value = jurusan;
+        document.getElementById("r_komentar").value = komentar;
+      }
+    </script>
+    <br />
+    <br />
+    <footer>&copy; Riyan Wahyu Prasetyo</footer>
+  </body>
+</html>

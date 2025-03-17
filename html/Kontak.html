@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        header {
+            padding: auto;
+            padding: 10px;
+        }
+
+        nav {
+            padding: 10px;
+            background-color: rgb(176, 235, 250);
+            display: flex;
+            gap: 30px;
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: white;
+
+        }
+
+        .content {
+            background-color: rgb(206, 222, 250);
+            box-shadow: 0 0 3px black;
+            padding: 10px;
+            min-height: 10px;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+        }
+
+        form input,
+        form textarea {
+            width: 98%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+        }
+
+        button {
+            width: 98%;
+            background-color: whitesmoke;
+            padding: 15px;
+            color: rgb(207, 139, 139);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        footer {
+            position: fixed;
+            background-color: rgb(176, 235, 250);
+            color: rgb(44, 43, 43);
+            text-align: center;
+            bottom: 0;
+            padding: 10px;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="1.html">Beranda</a>
+        <a href="tentangkami.html">Tentang Kami</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="Kontak.html">Kontak</a>
+    </nav>
+    <header>
+        <h1>Kontak Kami</h1>
+
+        <p>
+            <small>Berinteraksi dengan Kami</small>
+        </p>
+        <hr />
+    </header>
+
+    <div class="content">
+        <form action="" method="post">
+            <label for="">Nama</label>
+            <input type="text" name="nama" id="nama" required>
+
+            <label for="">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="">Pesan</label>
+            <textarea name="pesan" id="pesan"></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+            <!-- <input type="button" type="submit" value="Kirim Pesan"> -->
+
+        </form>
+    </div>
+
+    <footer>
+        &copy; Website Design by Afny
+    </footer>
+</body>
+
+</html>

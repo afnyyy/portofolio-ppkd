@@ -1,0 +1,143 @@
+<HTML>
+    <HEAD><TITLE>Percabangan IF-ELSE 2</TITLE></HEAD>
+        <BODY>
+            <FORM NAME ="fform">
+            <table border="1" align="center"width="70%">
+            <tr>
+                <td width="100%" colspan="2"><H2 ALIGN="center">RAYEN AIR</H2></td>
+            </tr>
+
+            <tr>
+            <td width="50%"><PRE>
+            Nama        :<input type="text" size="20" id="inama">
+            Tujuan      :<select id="itujuan" size=1>
+                        <option value="Korea">Korea</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Arab-Saudi">Arab Saudi</option>
+            </select>
+            Kelas       :<select id="ikelas" size=1>
+                        <option value="Eksekutif">Eksekutif</option>
+                        <option value="Bisnis">Bisnis</option>
+                        <option value="Ekonomi">Ekonomi</option>
+                        </select>
+            Jumlah Tiket:<input type="text" size="11" id="ijumlah">
+            Member      :<input type="checkbox" name="imember">Ya</td></pre>
+
+            <td width="50%"><pre>
+            Harga Tiket     :<input type="text" size="10" name="otiket">
+            Sub Total       :<input type="text" size="10" name="osub">
+            Diskon          :<input type="text" size="10" name="odiskon">
+            Total Bayar     :<input type="text" size="10" name="ototal"></td><pre>
+            </tr>
+            <tr>
+            <td width="100%" colspan="2">
+
+            <center>
+            <button TYPE="button" onclick="hitungtotal()"> Hitung </button>
+            <button TYPE="reset" > Ulang </button>
+            </center></td>
+
+            </tr>
+            </table>
+            </FORM>
+
+
+            <!-- Ini Script  -->
+            <SCRIPT language="JavaScript">
+                <!--
+                function hitungtotal()
+                {
+                    var nama = document.getElementById("inama").value;
+                    var tujuan = document.getElementById("itujuan").value;
+                    var kelas = document.getElementById("ikelas").value;
+                    var jumlahtiket = parseInt(document.getElementById("ijumlah").value) || 0;
+
+                    var ht = 0.0;
+                    var sub = 0.0;
+                    var diskon =0.0;
+                    var total =0.0;
+
+                // if  (tujuan == "Korea"){
+                //     if  (kelas == "Eksekutif" ) {
+                //         ht = 70000;  
+                //     } 
+                //     else if (kelas == "Bisnis" ) {
+                //         ht = 40000;
+                //     } 
+                //     else if (kelas == "Ekonomi" ) {
+                //         ht = 10000;
+                //     } 
+                // }
+                // else if (tujuan=="Australia"){
+                //     if  (kelas == "Eksekutif" ) {
+                //         ht = 80000;  
+                //     } 
+                //     else if (kelas == "Bisnis" ) {
+                //         ht = 50000;
+                //     } 
+                //     else if (kelas == "Ekonomi" ) {
+                //         ht = 20000;
+                //     } 
+                // }
+                // else{
+                //     if  (kelas == "Eksekutif" ) {
+                //         ht = 90000;  
+                //     } 
+                //     else if (kelas == "Bisnis" ) {
+                //         ht = 60000;
+                //     } 
+                //     else if (kelas == "Ekonomi" ) {
+                //         ht = 30000;
+                //     } 
+                // }
+
+                switch (tujuan) {
+                    case "Korea":
+                        switch (kelas){
+                            case "Eksekutif" : ht = 70000;
+                        break;
+                            case "Bisnis" : ht = 40000;
+                        break;
+                            case "Ekonomi" : ht = 10000;
+                        break;
+                        }
+                    case "Australia":
+                        switch (kelas){
+                            case "Eksekutif" : ht = 80000;
+                        break;
+                            case "Bisnis" : ht = 50000;
+                        break;
+                            case "Ekonomi" : ht = 20000;
+                        break;
+                        }
+                    case "Arab-Saudi":
+                        switch (kelas){
+                            case "Eksekutif" : ht = 90000;
+                        break;
+                            case "Bisnis" : ht = 60000;
+                        break;
+                            case "Ekonomi" : ht = 30000;
+                        break;
+                        }
+                        break;
+                }
+
+                sub = jumlahtiket*ht;
+
+                if (document.fform.imember.checked==true){
+                diskon =0.10*sub;
+                }
+                else{
+                diskon=0.0;
+                }
+                total = sub-diskon;
+
+                document.fform.otiket.value=eval(ht);
+                document.fform.osub.value=eval(sub);
+                document.fform.odiskon.value=eval(diskon);
+                document.fform.ototal.value=eval(total);
+                // gunakan untuk mengecek !!! alert (total);
+                }
+                //--></SCRIPT>
+        </BODY>
+    </HTML>

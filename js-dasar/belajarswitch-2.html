@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rayen Air</title>
+
+    <style>
+    .container-input{
+        background-color: rgb(137, 163, 248);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .container-output{
+        background-color: aquamarine;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center"> RAYEN AIR </h1>
+
+        <div class="container-input" >
+            <form action="">
+                <label for=""> Nama :</label> 
+                <input type="text" id="inama"> <br> <br>
+                <label for=""> Tujuan : </label>
+                <select name="" id="itujuan">
+                    <option value="Arab-Saudi"> Arab Saudi </option>
+                    <option value="Australia"> Australia </option>
+                    <option value="Korea"> Korea </option>
+                </select> <br> <br>
+                <label for=""> Kelas :</label> 
+                <select name="" id="ikelas">
+                    <option value="Eksekutif"> Eksekutif </option>
+                    <option value="Bisnis"> Bisnis </option>
+                    <option value="Ekonomi"> Ekonomi </option>
+                </select> <br><br>
+                <label for="Jumlah"> Jumlah Tiket :</label> 
+                <input type="number" name="" id="ijumlah"> <br><br>
+                <label for=""> Member : </label>
+                <input type="checkbox" id="imember"> 
+
+                <center>
+                    <button TYPE="button" onclick="hitungTotal()"> Hitung </button>
+                    <button TYPE="reset" > Ulang </button>
+                </center></td>
+        </div>
+        <div class="container-output">
+            <label for=""> Harga Tiket : </label> 
+            <input type="text" id="otiket"><br><br>
+            <label for=""> Sub Total : </label> 
+            <input type="text" id="osub"><br><br>
+            <label for=""> Diskon : </label> 
+            <input type="text" id="odiskon"><br><br>
+            <label for=""> Total Bayar : </label> 
+            <input type="text" id="ototal">
+        </div>
+    </form>
+    </div>
+    
+    <!-- Ini Java Scriptnya -->
+    <script>
+        function hitungTotal(){
+            var nama = document.getElementById("inama").value;
+            
+            var tujuan = document.getElementById("itujuan").value;
+            var kelas = document.getElementById("ikelas").value;
+            var jumlah = parseInt(document.getElementById("ijumlah").value) || 0;
+            
+            var hargaTiket = 0.0;
+            var subTotal = 0.0;
+            var diskon = 0.0;
+            var totalBayar = 0.0;
+
+        // Perhitungan IF/ELSE 
+        if (tujuan == "Arab-Saudi"){
+            if  (kelas == "Eksekutif") {
+                hargaTiket = 70000;  
+            }
+            else if (kelas == "Bisnis") {
+                hargaTiket = 40000;
+            }
+            else if (kelas == "Ekonomi") {
+                hargaTiket = 10000;
+            }  
+        }
+
+        if (tujuan == "Australia"){
+            if  (kelas == "Eksekutif") {
+                hargaTiket = 80000;  
+            }
+            else if (kelas == "Bisnis") {
+                hargaTiket = 50000;
+            }
+            else if (kelas == "Ekonomi") {
+                hargaTiket = 20000;
+            }  
+        }
+
+        if (tujuan == "Korea"){
+            if  (kelas == "Eksekutif") {
+                hargaTiket = 90000;  
+            }
+            else if (kelas == "Bisnis") {
+                hargaTiket = 60000;
+            }
+            else if (kelas == "Ekonomi") {
+                hargaTiket = 30000;
+            }  
+        }
+
+        sub = jumlah * hargaTiket;
+        if (document.getElementById("imember").checked == true){
+        diskon = 0.10 * sub;
+        } else {
+        diskon = 0.0;
+        }
+        totalBayar = sub - diskon;
+
+        document.getElementById("otiket").value = hargaTiket;
+        document.getElementById("osub").value = sub;
+        document.getElementById("odiskon").value = diskon;
+        document.getElementById("ototal").value = totalBayar;
+        // document.fform.otiket.value=eval(hargaTiket);
+        // document.fform.osub.value=eval(sub);
+        // document.fform.odiskon.value=eval(diskon);
+        // document.fform.ototal.value=eval(totalBayar);
+    }
+    </script>
+
+</body>
+</html>
